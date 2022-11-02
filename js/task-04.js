@@ -7,3 +7,6 @@ const decrementBtn = () => {
 const incrementBtn = () => {
   counterValue.textContent = parseInt(counterValue.textContent) + 1;
 };
+
+btn.firstElementChild.addEventListener("click", decrementBtn);
+btn.lastElementChild.addEventListener("click", incrementBtn);
