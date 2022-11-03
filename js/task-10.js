@@ -23,6 +23,7 @@ const create = (event) => {
     }
     if (boxes.children.length >= number.max) {
       alert("You have reached the maximum number of boxes = 100!");
+      return false;
     }
   }
 };
