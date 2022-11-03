@@ -40,6 +40,5 @@ const destroy = (event) => {
     }
   }
 };
-
 btn.addEventListener("click", create);
 btn.nextElementSibling.addEventListener("click", destroy);
