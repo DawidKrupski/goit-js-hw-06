@@ -29,17 +29,19 @@ const create = (event) => {
 };
 
 const destroy = (event) => {
-  for (let i = 0; i < number.value; i++) {
+  for (
+    let i = boxes.children.length - 1;
+    i > boxes.children.length - 1 - number.value;
+    i--
+  ) {
     if (0 < boxes.children.length) {
-      const div = document.querySelector("div>div");
+      const div = boxes.children[i];
       div.remove();
-    }
-    if (0 > boxes.children.length) {
-      alert("There are no more boxes to destroy");
+    } else {
+      alert("You destroy all boxes!");
       return false;
     }
   }
 };
-
 btn.addEventListener("click", create);
 btn.nextElementSibling.addEventListener("click", destroy);
