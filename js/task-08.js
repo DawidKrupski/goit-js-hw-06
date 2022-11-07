@@ -10,7 +10,8 @@ const check = (event) => {
     }
   }
   for (let i = 0; i < input.length; i++) {
-    console.log(input[i].name + ":", input[i].value);
+    const data = input[i].name + ": " + input[i].value;
+    console.log(data);
   }
   form.reset();
 };

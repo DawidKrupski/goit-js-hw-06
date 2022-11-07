@@ -9,6 +9,6 @@ const changeColor = (event) => {
   body.style.backgroundColor = getRandomHexColor();
   color.textContent = getRandomHexColor();
 };
-console.log();
 
+window.addEventListener("load", changeColor);
 btn.addEventListener("click", changeColor);
