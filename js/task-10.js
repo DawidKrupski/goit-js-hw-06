@@ -29,18 +29,9 @@ const create = (event) => {
 };
 
 const destroy = (event) => {
-  for (
-    let i = boxes.children.length - 1;
-    i > boxes.children.length - 1 - number.value;
-    i--
-  ) {
-    if (0 < boxes.children.length) {
-      const div = boxes.children[i];
-      div.remove();
-    } else {
-      alert("You destroy all boxes!");
-      return false;
-    }
+  const boxesLength = boxes.children.length;
+  for (let i = boxesLength - 1; i > boxesLength - 1 - number.value; i--) {
+    boxes.children[i].remove();
   }
 };
 btn.addEventListener("click", create);
